@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>BVA_TestingExample</RootNamespace>
+    <ApplicationIcon>Uiconstock-Flat-Halloween-Halloween-Bug.ico</ApplicationIcon>
   </PropertyGroup>
 
 </Project>

@@ -17,8 +17,8 @@ namespace BVA_TestingExample
         {
             
             Console.WriteLine("Enter A Boundary To Test");
-            int inputBoundary = Convert.ToInt32(Console.ReadLine());
-            int[] arr = new int[vary];
+            double inputBoundary = Convert.ToDouble(Console.ReadLine());
+            double[] arr = new double[vary];
 
             try
             {
@@ -27,9 +27,9 @@ namespace BVA_TestingExample
                     Console.WriteLine("Enter a Value:");
                     string input = Console.ReadLine();
 
-                    if (!int.TryParse(input, out arr[i]))
+                    if (!double.TryParse(input, out arr[i]))
                     {
-                        Console.Write("Array = " + string.Join(", ", arr[i]) + "\r\n");
+                        //Console.Write("Array = " + string.Join(", ", arr[i]) + "\r\n");
                     }
                     if (arr[i] <= inputBoundary && arr[i] > 0)
                         Console.WriteLine("pass\r\n");
@@ -39,11 +39,16 @@ namespace BVA_TestingExample
 
                     else
                         Console.WriteLine("fail\r\n");
+
+                    
+                    
                 }
+                Console.WriteLine("Press any key to exit . . . ");
+                Console.ReadLine();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                throw e;
             }
         }
     }
